@@ -7,7 +7,6 @@ let task, newItem
 btn.addEventListener('click',list)
 
 function list(){
-    console.log("list running")
     if(input.value !== ''){
     let newItem = document.createElement('li')
     newItem.textContent = input.value
