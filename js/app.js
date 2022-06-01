@@ -1,16 +1,17 @@
-let taskList
 
+const input = document.querySelector("#task")
+const btn = document.querySelector("#submit-button")
+const todoList = document.querySelector("#todo-list")
+let task, newItem
 
+btn.addEventListener('click',list)
 
-let tsk = document.getElementById("#task")
-let btn = document.getElementById("#submit-button")
-let lst = document.getElementById("#todo-list")
- 
-function (){
-    taskList = tsk.value
+function list(){
+    console.log("list running")
+    if(input.value !== ''){
+    let newItem = document.createElement('li')
+    newItem.textContent = input.value
+    todoList.appendChild(newItem)
+    input.value = null
+    }
 }
-
-console.log(tsk.value)
-// function makelist(){
-//     tsk.value.push(document.createElement(li))
-// }
